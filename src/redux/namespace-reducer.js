@@ -22,7 +22,7 @@ export const nameSpacesReducer = (state = initState, action) => {
     case SET_NAMESPACES:
       return {
         ...state,
-        list: action.list,
+        list: action.list.items,
         isLoading: false,
       };
     default:

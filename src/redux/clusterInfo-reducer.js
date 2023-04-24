@@ -22,7 +22,7 @@ export const clusterInfoReducer = (state = initState, action) => {
     case SET_CLUSTERINFO:
       return {
         ...state,
-        list: action.list,
+        list: [action.list],
         isLoading: false,
       };
     default:

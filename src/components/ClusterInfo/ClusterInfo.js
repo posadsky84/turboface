@@ -9,21 +9,17 @@ const mapStateToProps = state => ({
   clusterInfo: state.clusterInfo,
 });
 
+
 const columns = [
   {
-    title: 'Наименование',
-    dataIndex: 'name',
-    key: 'name',
+    title: 'control_plane',
+    dataIndex: 'control_plane',
+    key: 'control_plane',
   },
   {
-    title: 'Статус',
-    dataIndex: 'status',
-    key: 'status',
-  },
-  {
-    title: 'Время сессии',
-    dataIndex: 'age',
-    key: 'age',
+    title: 'core_dns',
+    dataIndex: 'core_dns',
+    key: 'core_dns',
   },
 ];
 
@@ -33,7 +29,7 @@ const ClusterInfo = ({clusterInfo,getClusterInfo}) => {
 
   return (
     <div>
-      klaster{/*<Table loading={pods.isLoading} dataSource={pods.list} columns={columns} />*/}
+      <Table loading={clusterInfo.isLoading} dataSource={clusterInfo.list} columns={columns} />
     </div>
   );
 

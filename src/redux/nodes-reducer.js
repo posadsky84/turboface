@@ -22,7 +22,7 @@ export const nodesReducer = (state = initState, action) => {
     case SET_NODES:
       return {
         ...state,
-        list: action.list,
+        list: action.list.items,
         isLoading: false,
       };
     default:

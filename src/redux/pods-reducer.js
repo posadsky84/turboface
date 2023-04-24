@@ -22,7 +22,7 @@ export const podsReducer = (state = initState, action) => {
     case SET_PODS:
       return {
         ...state,
-        list: action.list,
+        list: action.list.items,
         isLoading: false,
       };
     default:

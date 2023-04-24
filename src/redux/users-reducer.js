@@ -22,7 +22,7 @@ export const usersReducer = (state = initState, action) => {
     case SET_USERS:
       return {
         ...state,
-        list: action.list,
+        list: action.list.items,
         isLoading: false,
       };
     default:
